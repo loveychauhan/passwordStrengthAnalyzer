@@ -6,9 +6,10 @@
 }
 
 body {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-  max-width: 100vw;
-  min-height: 100vh;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  width: 480px;
+  height: 600px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,11 +28,15 @@ body.dark-mode .container {
   color: #f1f5f9;
 }
 
-body.dark-mode h1, body.dark-mode #strength-text, body.dark-mode h2 {
+body.dark-mode h1,
+body.dark-mode #strength-text,
+body.dark-mode h2 {
   color: #dbeafe;
 }
 
-body.dark-mode #password-input, body.dark-mode #password-length, body.dark-mode #policy-min-length {
+body.dark-mode #password-input,
+body.dark-mode #password-length,
+body.dark-mode #policy-min-length {
   background: #374151;
   color: #f1f5f9;
   border-color: #4b5563;
@@ -42,7 +47,8 @@ body.dark-mode #feedback {
   color: #fefcbf;
 }
 
-body.dark-mode #generated-password, body.dark-mode #settings-panel {
+body.dark-mode #generated-password,
+body.dark-mode #settings-panel {
   background: #374151;
   color: #f1f5f9;
 }
@@ -54,11 +60,15 @@ body.high-contrast .container {
   border: 2px solid #fff;
 }
 
-body.high-contrast h1, body.high-contrast #strength-text, body.high-contrast h2 {
+body.high-contrast h1,
+body.high-contrast #strength-text,
+body.high-contrast h2 {
   color: #fff;
 }
 
-body.high-contrast #password-input, body.high-contrast #password-length, body.high-contrast #policy-min-length {
+body.high-contrast #password-input,
+body.high-contrast #password-length,
+body.high-contrast #policy-min-length {
   background: #fff;
   color: #000;
   border: 2px solid #000;
@@ -69,7 +79,8 @@ body.high-contrast #feedback {
   color: #000;
 }
 
-body.high-contrast #generated-password, body.high-contrast #settings-panel {
+body.high-contrast #generated-password,
+body.high-contrast #settings-panel {
   background: #fff;
   color: #000;
   border: 2px solid #000;
@@ -121,7 +132,8 @@ h1 {
   gap: 8px;
 }
 
-#theme-toggle, #contrast-toggle {
+#theme-toggle,
+#contrast-toggle {
   padding: 6px 10px;
   background: #4b5563;
   color: #fff;
@@ -132,7 +144,8 @@ h1 {
   transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
-#theme-toggle:hover, #contrast-toggle:hover {
+#theme-toggle:hover,
+#contrast-toggle:hover {
   background: #374151;
   transform: translateY(-1px);
 }
@@ -197,7 +210,8 @@ h1 {
   flex: 1;
   background: #e5e7eb;
   border-radius: 3px;
-  transition: width 0.4s ease-in-out, background-color 0.4s ease-in-out, transform 0.2s ease;
+  transition: width 0.4s ease-in-out, background-color 0.4s ease-in-out,
+    transform 0.2s ease;
 }
 
 .segment.weak {
@@ -212,7 +226,9 @@ h1 {
   background: #22c55e;
 }
 
-.segment.weak, .segment.medium, .segment.strong {
+.segment.weak,
+.segment.medium,
+.segment.strong {
   animation: pulse 0.3s ease;
 }
 
@@ -224,9 +240,15 @@ h1 {
 }
 
 @keyframes pulse {
-  0% { transform: scaleY(1); }
-  50% { transform: scaleY(1.2); }
-  100% { transform: scaleY(1); }
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scaleY(1.2);
+  }
+  100% {
+    transform: scaleY(1);
+  }
 }
 
 /* Feedback */
@@ -246,8 +268,12 @@ h1 {
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /* Button Group */
@@ -258,7 +284,9 @@ h1 {
   flex-wrap: wrap;
 }
 
-#generate-password, #copy-password, #settings-toggle {
+#generate-password,
+#copy-password,
+#settings-toggle {
   flex: 1;
   min-width: 80px;
   padding: 10px;
@@ -272,28 +300,34 @@ h1 {
   transition: background 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
 }
 
-#copy-password, #settings-toggle {
+#copy-password,
+#settings-toggle {
   background: #10b981;
 }
 
-#generate-password:hover, #copy-password:hover, #settings-toggle:hover {
+#generate-password:hover,
+#copy-password:hover,
+#settings-toggle:hover {
   background: linear-gradient(90deg, #2563eb 0%, #1e40af 100%);
   transform: translateY(-1px);
   box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
 }
 
-#copy-password:hover, #settings-toggle:hover {
+#copy-password:hover,
+#settings-toggle:hover {
   background: #059669;
 }
 
-#generate-password:active, #copy-password:active, #settings-toggle:active {
+#generate-password:active,
+#copy-password:active,
+#settings-toggle:active {
   transform: translateY(0);
 }
 
 /* Generated Password */
 #generated-password {
   width: 100%;
-  font-family: 'Fira Mono', monospace;
+  font-family: "Fira Mono", monospace;
   font-size: 13px;
   background: #f3f4f6;
   padding: 10px;
