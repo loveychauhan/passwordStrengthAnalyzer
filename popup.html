@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Strength Analyzer</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fira+Mono&display=swap">
+  <link rel="stylesheet" href="css/popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Password Strength Analyzer</h1>
+    <div class="toggles">
+      <button id="theme-toggle" data-tooltip="Toggle dark mode" aria-label="Toggle dark mode">🌙</button>
+      <button id="contrast-toggle" data-tooltip="Toggle high-contrast mode" aria-label="Toggle high-contrast mode">🔆</button>
+    </div>
+    <div class="input-group">
+      <label for="password-input">Enter Password:</label>
+      <input type="password" id="password-input" placeholder="Type your password" autocomplete="off" aria-label="Password input">
+      <button id="toggle-password" data-tooltip="Show or hide password" aria-label="Toggle password visibility">Show</button>
+    </div>
+    <div id="strength-meter" role="region" aria-live="polite">
+      <div class="strength-segments">
+        <div id="length-bar" class="segment" aria-hidden="true"></div>
+        <div id="variety-bar" class="segment" aria-hidden="true"></div>
+        <div id="entropy-bar" class="segment" aria-hidden="true"></div>
+      </div>
+      <span id="strength-text" aria-label="Password strength status"></span>
+    </div>
+    <div id="feedback" role="alert"></div>
+    <div class="button-group">
+      <button id="generate-password" data-tooltip="Generate a secure password" aria-label="Generate password">Generate Password</button>
+      <button id="copy-password" data-tooltip="Copy generated password" aria-label="Copy to clipboard" style="display: none;">Copy</button>
+      <button id="settings-toggle" data-tooltip="Toggle custom policy settings" aria-label="Toggle settings">Settings</button>
+    </div>
+    <div id="generated-password"></div>
+    <div id="settings-panel" style="display: none;">
+      <h2>Custom Password Policy</h2>
+      <label>Min Length: <input type="number" id="policy-min-length" min="1" max="50" value="8" aria-label="Minimum password length"></label>
+      <label><input type="checkbox" id="policy-uppercase" aria-label="Require uppercase letters"> Require Uppercase</label>
+      <label><input type="checkbox" id="policy-lowercase" aria-label="Require lowercase letters"> Require Lowercase</label>
+      <label><input type="checkbox" id="policy-numbers" aria-label="Require numbers"> Require Numbers</label>
+      <label><input type="checkbox" id="policy-symbols" aria-label="Require symbols"> Require Symbols</label>
+    </div>
+    <div class="options">
+      <label><input type="checkbox" id="include-uppercase" checked aria-label="Include uppercase letters"> Uppercase</label>
+      <label><input type="checkbox" id="include-lowercase" checked aria-label="Include lowercase letters"> Lowercase</label>
+      <label><input type="checkbox" id="include-numbers" checked aria-label="Include numbers"> Numbers</label>
+      <label><input type="checkbox" id="include-symbols" checked aria-label="Include symbols"> Symbols</label>
+      <label>Length: <input type="number" id="password-length" value="12" min="8" max="50" aria-label="Password length"></label>
+    </div>
+  </div>
+  <script src="js/strengthEvaluator.js"></script>
+  <script src="js/passwordGenerator.js"></script>
+  <script src="js/feedbackEngine.js"></script>
+  <script src="js/popup.js"></script>
+</body>
+</html>
