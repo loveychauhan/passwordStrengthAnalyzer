@@ -17,7 +17,7 @@ body {
   background: linear-gradient(145deg, #dbeafe 0%, #f1f5f9 100%);
   color: #1f2937;
   line-height: 1.5;
-  
+
 }
 
 /* Dark Mode */
@@ -155,7 +155,7 @@ h1 {
 /* Input Group */
 .input-group {
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   gap: 8px;
   align-items: center;
   width: 100%;
